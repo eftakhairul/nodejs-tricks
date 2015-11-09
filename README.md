@@ -1,2 +1,3 @@
-# nodejs-tricks
-Bringing all the helpful tricks in one place
+# NodeJS Tricks
+
+Bringing all the helpful tricks from the different websites, talks, tweets etc in one place. Just fork and contribute this one. 
