@@ -7,6 +7,15 @@ var util = require('util');
 var fileNames  =  [];
 var targetFile =  __dirname + '/' + 'README.md';
 
+gulp.task('header', function() {
+    var header = "#NodeJS Tricks \
+	##Bringing all the helpful tricks from the different websites, talks, tweets etc in one place. Just fork and \
+    ##contribute this one." ;
+
+    fs.writeFileSync(targetFile, '');
+    fs.appendFileSync(targetFile, header);
+});
+
 gulp.task('content', function() {
     var files = fs.readdirSync(__dirname);
 
@@ -22,6 +31,12 @@ gulp.task('content', function() {
 
               fs.appendFileSync(targetFile, contents);
          });
+});
+
+gulp.task('contributors', function() {
+});
+
+gulp.task('header', function() {
 });
 
 // Default Task
