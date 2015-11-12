@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-tricks",
+  "version": "1.0.0",
+  "description": "All special tricks of NodeJS are in one place",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eftakhairul/nodejs-tricks"
+  },
+  "keywords": [
+    "tricks",
+    "nodejs",
+    "js"
+  ],
+  "author": "Eftakhairul Islam <eftakhairul@gmail.com> (http://eftakhairul.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eftakhairul/nodejs-tricks/issues"
+  },
+  "homepage": "https://github.com/eftakhairul/nodejs-tricks"
+}
