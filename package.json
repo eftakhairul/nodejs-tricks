@@ -4,7 +4,9 @@
   "description": "All special tricks of NodeJS are in one place",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.0"
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "util": "^0.10.3"
   },
   "devDependencies": {},
   "scripts": {
