@@ -67,20 +67,17 @@ gulp.task('contributors', function() {
 });
 
 gulp.task('footer', function() {
-    var contributingMessage = "1. Fork it\n\
-    1. Create your trick branch: `git checkout -b my-js-trick\n\
-    1. Add your trick to the collection of `.js` files\n\
-    1. Regenerate `README.md`: `gulp build` (Install dependencies: npm install)\n\
-    1. Commit your changes: `git commit -am 'Add trick'`\n\
-    1. Push to the branch: `git push origin my-js-trick`\n\
-    1. Create new Pull Request and explain why your code is trick";
+    var contributingMessage = "1. Fork it\n1. Create your trick branch: `git checkout -b my-js-trick\n1. Add" +
+        " your trick to the collection of `.js` files\n1. Regenerate `README.md`: `gulp build` " +
+        "(Install dependencies: npm install)\n1. Commit your changes: `git commit -am 'Add trick'`\n1. " +
+        "Push to the branch: `git push origin my-js-trick`\n1. Create new Pull Request and explain why your " +
+        "code is trick\n";
 
     fs.appendFileSync(targetFile, '\n');
     fs.appendFileSync(targetFile, '\n');
     fs.appendFileSync(targetFile, '##Contributing\n');
     fs.appendFileSync(targetFile, '\n');
-    fs.appendFileSync(targetFile, '\n');
-    fs.appendFileSync(targetFile, contributingMessage);
+    fs.appendFileSync(targetFile, contributingMessage.trim());
 });
 
 // Default Task
