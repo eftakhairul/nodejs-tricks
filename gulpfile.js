@@ -15,11 +15,11 @@ String.prototype.capitalize = function() {
 };
 
 gulp.task('header', function() {
-    var header = "#NodeJS Tricks \n \
-	              Bringing all the helpful tricks from the different websites, talks, tweets etc \
+    var header = "Bringing all the helpful tricks from the different websites, talks, tweets etc \
                   in one place. Just fork and contribute this one.\n" ;
 
     fs.writeFileSync(targetFile, '');
+    fs.appendFileSync(targetFile, '#NodeJS Tricks');
     fs.appendFileSync(targetFile, header);
 });
 
@@ -36,7 +36,7 @@ gulp.task('content', function() {
               var heading  = path.basename(fileName, '.js').replace('_', ' ').capitalize();
               var filePath = __dirname + '/' + fileName;
               var contents = fs.readFileSync(filePath).toString();
-              body         = body + util.format(['### %s',
+              body         = body + util.format(['###%s',
                                                 '```javascript',
                                                 '%s',
                                                 '```',
@@ -44,7 +44,7 @@ gulp.task('content', function() {
          });
 
 
-    fs.appendFileSync(targetFile, '## Table of Contents\n');
+    fs.appendFileSync(targetFile, '##Table of Contents\n');
 
     fileNames.forEach(function(fileName) {
         var heading  = path.basename(fileName, '.js').replace('_', ' ').capitalize();
@@ -55,7 +55,7 @@ gulp.task('content', function() {
         fs.appendFileSync(targetFile,'\n');
     });
 
-    fs.appendFileSync(targetFile, '## Tricks\n');
+    fs.appendFileSync(targetFile, '##Tricks\n');
     fs.appendFileSync(targetFile, body);
 
 });
