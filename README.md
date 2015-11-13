@@ -19,3 +19,13 @@ console.log(hello);
 console.log('hello world!');
 ```
 [View Source](test_name.js)
+
+
+## Contributing
+                     1. Fork it
+                     1. Create your trick branch: `git checkout -b my-js-trick
+                     1. Add your trick to the collection of `.js` files
+                     1. Regenerate `README.md`: `gulp build` (Install dependencies: npm install)
+                     1. Commit your changes: `git commit -am 'Add trick'`
+                     1. Push to the branch: `git push origin my-js-trick`
+                     1. Create new Pull Request and explain why your code is trick

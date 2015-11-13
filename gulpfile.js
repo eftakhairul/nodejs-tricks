@@ -67,6 +67,17 @@ gulp.task('contributors', function() {
 });
 
 gulp.task('footer', function() {
+    var message = "## Contributing\n \
+                    1. Fork it\n \
+                    1. Create your trick branch: `git checkout -b my-js-trick\n \
+                    1. Add your trick to the collection of `.js` files\n \
+                    1. Regenerate `README.md`: `gulp build` (Install dependencies: npm install)\n \
+                    1. Commit your changes: `git commit -am 'Add trick'`\n \
+                    1. Push to the branch: `git push origin my-js-trick`\n \
+                    1. Create new Pull Request and explain why your code is trick";
+    fs.appendFileSync(targetFile, '\n');
+    fs.appendFileSync(targetFile, '\n');
+    fs.appendFileSync(targetFile, message);
 });
 
 // Default Task
