@@ -3,10 +3,17 @@ Bringing all the helpful tricks from the different websites, talks, tweets etc  
 
 
 ##Table of Contents
+- [Hello World](#hello-world)
 - [Test Name](#test-name)
 
 
 ##Tricks
+###Hello World
+```javascript
+var hello = 'hello world'
+console.log(hello);
+```
+[View Source](hello_world.js)
 ###Test Name
 ```javascript
 console.log('hello world!');
