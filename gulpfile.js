@@ -19,7 +19,7 @@ gulp.task('header', function() {
                   in one place. Just fork and contribute this one.\n" ;
 
     fs.writeFileSync(targetFile, '');
-    fs.appendFileSync(targetFile, '#NodeJS Tricks');
+    fs.appendFileSync(targetFile, '#NodeJS Tricks\n');
     fs.appendFileSync(targetFile, header);
 });
 
@@ -44,17 +44,20 @@ gulp.task('content', function() {
          });
 
 
+    fs.appendFileSync(targetFile, '\n');
+    fs.appendFileSync(targetFile, '\n');
     fs.appendFileSync(targetFile, '##Table of Contents\n');
 
     fileNames.forEach(function(fileName) {
         var heading  = path.basename(fileName, '.js').replace('_', ' ').capitalize();
         var link     = path.basename(fileName, '.js').replace('_', '-').toLowerCase();
-        var item     = util.format(['- [%s](#%s)'].join('\n'), heading, link);
+        var item     = util.format('- [%s](#%s)\n', heading, link);
 
         fs.appendFileSync(targetFile,item);
-        fs.appendFileSync(targetFile,'\n');
     });
 
+    fs.appendFileSync(targetFile, '\n');
+    fs.appendFileSync(targetFile, '\n');
     fs.appendFileSync(targetFile, '##Tricks\n');
     fs.appendFileSync(targetFile, body);
 
