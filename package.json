@@ -6,6 +6,7 @@
   "dependencies": {
     "fs": "0.0.2",
     "gulp": "^3.9.0",
+    "path": "^0.12.7",
     "util": "^0.10.3"
   },
   "devDependencies": {},
