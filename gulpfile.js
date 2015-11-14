@@ -74,7 +74,6 @@ gulp.task('footer', function() {
         "code is trick\n";
 
     fs.appendFileSync(targetFile, '\n');
-    fs.appendFileSync(targetFile, '\n');
     fs.appendFileSync(targetFile, '##Contributing\n');
     fs.appendFileSync(targetFile, '\n');
     fs.appendFileSync(targetFile, contributingMessage.trim());

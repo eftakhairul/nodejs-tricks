@@ -4,7 +4,6 @@ Bringing all the helpful tricks from the different websites, talks, tweets etc  
 
 ##Table of Contents
 - [Inheritance](#inheritance)
-- [Test Name](#test-name)
 
 
 ##Tricks
@@ -69,12 +68,6 @@ User.prototype.display = { /* ... */ }
 module.exports = User;
 ```
 [View Source](inheritance.js)
-###Test Name
-```javascript
-console.log('hello world!');
-```
-[View Source](test_name.js)
-
 
 ##Contributing
 
