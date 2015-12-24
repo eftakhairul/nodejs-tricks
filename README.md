@@ -9,6 +9,8 @@ Bringing all the helpful tricks from the different websites, talks, tweets etc  
 ##Tricks
 ###Inheritance
 ```javascript
+'use strict';
+
 //Classic OOP
 var Rectangle = function (length, width) {
   this.length = length;
@@ -18,12 +20,12 @@ var Rectangle = function (length, width) {
   this.calcArea = function() {
       return this.length * this.width;
   };
-}
+};
 
 var Square =  function (length) {
   this.length = length;
   this.width  = length;
-}
+};
 
 //For Inheriting all methods
 Square.prototype =  new Rectangle();
@@ -39,33 +41,38 @@ console.log(mySquare.calcArea());
 
 //Modular Inheritance
 //Base.js
-function Base() { /* ... */ }
-Base.prototype.print = { /* ... */ }
+function Base() {}
+Base.prototype.print = function() {
+  Console.log('Printing.');
+};
+
 module.exports = Base;
 
 
 //User.js
+var util = require('util');
 var Base = require('relative/or/absolute/path/to/Base');
 
-function User() {
-    Base.super_.apply(this, arguments);
-}
+function User() {}
 
-User.super_    = Base;
-User.prototype = Object.create(Base.prototype, {
-    constructor: {
-        value      : User,
-        enumarable : false
-    }
-});
 
-//OR
-var util = require('util');
 util.inherits(User, Base);
-
-
-User.prototype.display = { /* ... */ }
 module.exports = User;
+
+
+User.prototype.display = function() {
+  Console.log('Displaying.');
+};
+
+
+var User    = require('relative/or/absolute/path/to/User');
+var userObj = new User();
+
+userObj.print();   //Printing.
+userObj.display();   //Displaying.'
+
+
+
 ```
 [View Source](inheritance.js)
 
